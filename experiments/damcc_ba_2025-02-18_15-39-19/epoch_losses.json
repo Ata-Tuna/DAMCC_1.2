@@ -1,0 +1,2 @@
+{"epoch": 1, "train_loss": 0.8409395376841228, "val_loss": 0.8309790889422098, "best_epoch": 1, "best_val_loss": 0.8309790889422098}
+{"epoch": 2, "train_loss": 0.8313643018404643, "val_loss": 0.8495016853014629, "best_epoch": 1, "best_val_loss": 0.8309790889422098}

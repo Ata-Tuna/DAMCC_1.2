@@ -1,0 +1,12 @@
+# Ignore all .pkl files
+*.pkl
+
+# Ignore other common files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.jpg
+*.pth
+.DS_Store
