@@ -1,7 +1,0 @@
-__pycache__
-*.png
-*.pdf
-*.jpg
-experiment_files/*
-experiment_files
-.idea/

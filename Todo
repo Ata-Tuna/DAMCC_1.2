@@ -4,6 +4,6 @@ Todo
 2. see if you can add some eval code   /try the format in brainiac
 3. restructure the Repo 
 
-4. Think of CC eval
 4. write stuff on the notebook to explain
-5. improve model
+4. Think of CC eval
+5. improve model: probably make the loss function be able to tip in the direction of knowing to sample ones
