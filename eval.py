@@ -162,6 +162,7 @@ def plot_top_N(ts, args, tag, N=5):
 def plot_network_statistics(stats, save_dir="", tag=""):
     model_names = stats.columns.get_level_values(0).unique()
     stat_names = stats.columns.get_level_values(1).unique()
+    
     fig, axs = plt.subplots(1, len(stat_names), figsize=(15, 3))
     for idx, statistic in enumerate(stat_names):
         stat_data = stats.xs(statistic, level=1, axis=1)
@@ -172,11 +173,15 @@ def plot_network_statistics(stats, save_dir="", tag=""):
             )
         axs[idx].set_title(statistic)
         axs[idx].legend(prop={"size": 6})
+    
     plt.tight_layout()
+    
+    # Ensure the directory exists
+    os.makedirs(save_dir, exist_ok=True)
+    
+    # Save the figure
     save_path = os.path.join(save_dir, tag + "network_statistics.jpg")
-    # os.makedirs(save_path, exist_ok=True)  # Ensure the directory exists
     plt.savefig(save_path, format="jpg", dpi=1200, bbox_inches="tight")
-
 
 # def statistics_compute_cpl(G):
 #     """Compute characteristic path length."""
