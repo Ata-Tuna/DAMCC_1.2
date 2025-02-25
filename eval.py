@@ -25,10 +25,10 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 warnings.filterwarnings("ignore", category=pd.errors.PerformanceWarning)
 
-# Your existing code
-with open('../eval/damcc_mmds.pkl', 'rb') as file:
-    damcc_mmds = pickle.load(file)
-(damcc_mmds)
+# # Your existing code
+# with open('../eval/damcc_mmds.pkl', 'rb') as file:
+#     damcc_mmds = pickle.load(file)
+# (damcc_mmds)
 
 
 def get_degree_seq(g_list):
