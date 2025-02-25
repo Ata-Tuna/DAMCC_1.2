@@ -174,6 +174,7 @@ def plot_network_statistics(stats, save_dir="", tag=""):
         axs[idx].legend(prop={"size": 6})
     plt.tight_layout()
     save_path = os.path.join(save_dir, tag + "network_statistics.jpg")
+    # os.makedirs(save_path, exist_ok=True)  # Ensure the directory exists
     plt.savefig(save_path, format="jpg", dpi=1200, bbox_inches="tight")
 
 

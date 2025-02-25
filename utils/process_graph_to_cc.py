@@ -271,9 +271,10 @@ def main(input_file, output_dir, test):
     output_file_name = f"{name_without_extension}_ccs.pkl"
     output_file = os.path.join(output_dir, output_file_name)
 
+    os.makedirs(output_dir, exist_ok=True)  # Ensure the directory exists
+
     with open(output_file, 'wb') as file:
         pickle.dump(cc_data, file)
-    print(f"Data saved to {output_file}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process graph data and save as CCDataset.")
