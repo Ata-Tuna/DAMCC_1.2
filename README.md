@@ -1,38 +1,56 @@
-# DAMCC
+# DAMCC 🚀
 ### (A Deep Autoregressive Model for Dynamic Combinatorial Complexes)
 
-Find the original paper [in this link](
-https://zenodo.org/records/14907028?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjE3ZTA0OGQ0LTZkZTEtNDAwMy1iZmY2LTA5MTBhYTM2MmNhYyIsImRhdGEiOnt9LCJyYW5kb20iOiI4ZDFlMGRhMTU2NjMxOThmYzZkNTJkYWFlOGU1N2MwNCJ9.pz70sQyjHbS7mQseL7uqVm1x8ZNiYIZuYuyqS9wEUFmhCVEz0V7SfAAawDY3nyil1MJwQLC7aXVGYOjc0rNnyg).
+📄 **Read the original paper:** [arXiv Link](https://arxiv.org/abs/2503.01999)
 
-## Dependencies
-Please install the packages in this order as instructed.
+---
 
-This project was developed in  Python 3.11.3, so we recommend this version.
+## 🛠️ Dependencies
 
-Create a conda environment (or an environment of your choice):
-   ```bash
-   conda create -n damcc python=3.11.3
-   conda activate damcc
-   ```
-The first dependency is TopoModelX.
-### Installing TopoModelX
+> **Recommended Python version:** `3.11.3`
 
-`TopoModelX` is available on PyPI and can be installed using `pip`.
-Run the following command:
+Set up your environment (using [conda](https://docs.conda.io/en/latest/), or your preferred tool):
+
+```bash
+conda create -n damcc python=3.11.3
+conda activate damcc
+```
+
+### 1️⃣ Install TopoModelX
+
+`TopoModelX` is available on PyPI:
 
 ```bash
 pip install topomodelx
 ```
 
-Then install torch, torch-scatter, torch-sparse with or without CUDA depending on your needs.
+### 2️⃣ Install PyTorch & Related Packages
+
+Install `torch`, `torch-scatter`, and `torch-sparse` (with or without CUDA):
+
 ```bash
 pip install torch==2.0.1 --extra-index-url https://download.pytorch.org/whl/${CUDA}
 pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.0.1+${CUDA}.html
+# Optional: torch-cluster (recommended by TopoModelX, but not required for DAMCC)
 pip install torch-cluster -f https://data.pyg.org/whl/torch-2.0.0+${CUDA}.html
 ```
-where `${CUDA}` should be replaced by either `cpu`, `cu102`, `cu113`, or `cu115` depending on your PyTorch installation (`torch.version.cuda`).
-Then run
+
+> Replace `${CUDA}` with `cpu`, `cu102`, `cu113`, or `cu115` according to your setup (`torch.version.cuda`).
+
+### 3️⃣ Install Remaining Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-For a quick tutorial see notebooks/damcc_tutorial.ipynb
+
+---
+
+## 📓 Quick Start
+
+Check out the [tutorial notebook](notebooks/damcc_tutorial.ipynb) for a hands-on introduction.
+
+> ⚠️ **Note:** Some users have reported issues on Apple M-series chips.
+
+---
+
+Happy coding! 💻✨
